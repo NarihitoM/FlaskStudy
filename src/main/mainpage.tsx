@@ -1,7 +1,7 @@
 import { useState, useRef, type FormEvent } from "react";
 import Logo from "../assets/mainlogo.png";
 import Aboutus from "../assets/aboutus.png";
-import { Facebook, Mail, Menu, Phone, X, Check, Youtube } from "lucide-react";
+import { Mail, Menu, Phone, X, Check } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
