@@ -311,10 +311,10 @@ const Quiz = () => {
 
                     <div className="flex flex-col items-center w-full justify-center gap-6 py-10">
                         <p className="text-black font-medium">Time Left : <span className="text-red-600">{time}</span></p>
-                        <div className="bg-yellow-600 p-8  w-[1000px] max-md:w-auto   max-w-full rounded-lg">
+                        <div className="bg-yellow-600 p-8  w-[1000px] max-md:w-[300px]   max-w-full rounded-lg">
                             <p className="text-white font-bold"> <div dangerouslySetInnerHTML={{ __html: Quiz[0].quiz[currentindex].question || "" }} /></p>
                         </div>
-                        <div className="flex flex-col w-[1000px] max-md:w-[400px] justify-center items-center gap-5">
+                        <div className="flex flex-col w-[1000px] max-md:w-[300px] justify-center items-center gap-5">
                             {Quiz[0].quiz[currentindex].choices.map((element, index) => {
                                 const isselect = selectedindex[currentindex] === index;
                                 return (
