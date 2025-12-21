@@ -1,6 +1,6 @@
 import { gettoken } from "@/lib/auth";
 import { deletehistory, gethistory } from "@/services/api/userapi";
-import type { QuizData } from "@/types/response";
+import type { QuizData } from "@/types/types";
 import { useEffect, useState } from "react";
 import { Check, X } from "lucide-react";
 import { ArrowLeft, ArrowRight } from "lucide-react";

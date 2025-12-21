@@ -1,5 +1,5 @@
 import { getstore } from "@/services/api/userapi";
-import { type Array, type SStorage, type Response } from "@/types/response";
+import { type Array, type SStorage, type Response } from "@/types/types";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";

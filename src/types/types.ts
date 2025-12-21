@@ -1,36 +1,36 @@
-export type Response = {
+export interface Response  {
     question: string,
     choices: string[],
     answer: string,
 }
-export type Flashcards = {
+export interface Flashcards {
     front: string,
     back: string,
 }
 
-export type Array = {
+export interface Array  {
     title: string,
     response: Response[],
     flashcard: Flashcards[],
     summary : string,
 }
 
-export type SStorage = {
+export interface SStorage  {
     _id: string,
     studies : Array[],
 }
 
-type Data = {
+interface Data  {
     question : string,
     choices : string[],
     answer : string
 }
-export type Quizset = {
+export interface Quizset  {
     title : string,
     quiz : Data[]
 }
 
-export type QuizData = {
+export interface QuizData  {
     title : string,
     quiz : Data[],
     status : string,

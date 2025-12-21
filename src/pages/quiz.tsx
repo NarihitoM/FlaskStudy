@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { type Quizset } from "@/types/response";
+import type { Quizset } from "@/types/types";
 import { aiquiz } from "@/services/api/aiapi";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";

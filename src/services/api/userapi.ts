@@ -1,5 +1,5 @@
 import axios from "axios";
-import type { Array, Quizset } from "@/types/response";
+import type { Array, Quizset } from "@/types/types";
 
 {/*User api host */}
 const url = "https://flask-db-gamma.vercel.app";

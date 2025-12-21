@@ -1,6 +1,6 @@
 import { gettoken } from "@/lib/auth";
 import { getstore } from "@/services/api/userapi";
-import type { SStorage,Array } from "@/types/response";
+import type { SStorage,Array } from "@/types/types";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 

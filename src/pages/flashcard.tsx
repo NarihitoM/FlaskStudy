@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getstore } from "@/services/api/userapi";
-import { type SStorage, type Array, type Flashcards } from "@/types/response"; import { gettoken } from "@/lib/auth";
+import { type SStorage, type Array, type Flashcards } from "@/types/types"; import { gettoken } from "@/lib/auth";
 ;
 
 const Flashcard = () => {

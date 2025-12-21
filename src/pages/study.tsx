@@ -1,6 +1,6 @@
 import { aiupload } from "@/services/api/aiapi";
 import { filestore, getprofile, getstore } from "@/services/api/userapi";
-import type { SStorage } from "@/types/response";
+import type { SStorage } from "@/types/types";
 import { AnimatePresence, motion } from "framer-motion";
 import { File, Trash, X } from "lucide-react";
 import { useEffect, useState } from "react";

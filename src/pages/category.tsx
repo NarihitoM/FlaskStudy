@@ -1,7 +1,7 @@
 import studyelement from "@/lib/studyelement";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { type SStorage, type Array } from "@/types/response";
+import { type SStorage, type Array } from "@/types/types";
 import { getstore } from "@/services/api/userapi";
 import { gettoken } from "@/lib/auth";
 
