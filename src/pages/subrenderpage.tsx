@@ -57,16 +57,16 @@ const Subrenderpage = () => {
                     <div className="flex flex-row justify-center items-center">
                         <img className="w-17 h-17" src={Logo} />
                         <div className="flex flex-col ">
-                            <h1 className="text-2xl font-bold text-black">
+                            <h1 className="text-xl font-bold text-black">
                                 <span className="text-yellow-700">F</span>laskS
                             </h1>
                             <p className="text-gray-500 text-[13px] font-medium">Study</p>
                         </div>
                     </div>
-                    <div className="flex flex-row gap-3 bg-gray-100 p-2 rounded-lg justify-center items-center">
+                    <div className="flex flex-row gap-1 bg-gray-100 p-2 rounded-lg justify-center items-center">
                         <div className="flex flex-col">
                             <p className="font-semibold">{username}</p>
-                            <p className="font-medium text-[13px]">{useremail}</p>
+                            <p className="font-medium text-[13px] text-wrap">{useremail}</p>
                         </div>
                         <button onClick={logout} className="bg-red-600 p-1.5 rounded-lg active:translate-y-1"><LogOut className="w-4 h-4 text-white" /></button>
                     </div>
