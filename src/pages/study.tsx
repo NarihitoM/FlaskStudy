@@ -226,7 +226,7 @@ const Study = () => {
                                 <div key={index} className="relative flex flex-row gap-3 bg-gray-200 p-3 rounded-lg ">
                                     <button onClick={() => deleteindex(index)} className="absolute right-3 top-3"><Trash className="text-red-600 w-6 active:translate-y-1" /></button>
                                     <File className="text-yellow-600" />
-                                    <span className="font-medium text-black" onClick={() => navigate(`/studydetail/${itemslist.title}`)}>{itemslist.title}</span>
+                                    <span className="font-medium  md:w-auto w-[200px] text-black" onClick={() => navigate(`/studydetail/${itemslist.title}`)}>{itemslist.title}</span>
                                 </div>
                             ))) :
                                 (
