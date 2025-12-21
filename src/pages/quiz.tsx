@@ -112,29 +112,23 @@ const Quiz = () => {
     }, [Quiz, currentindex, selectedindex, time]);
 
     {/*Check Whether There is Quiz or not */ }
-   useEffect(() => {
-
-    if (typeof window === "undefined") return;
-
-    const saved = localStorage.getItem("QuizProgress");
-    const finished = localStorage.getItem("QuizFinished");
-
-    if (saved && !finished) {
-        const parsed = JSON.parse(saved);
-        if (parsed?.quiz?.length > 0) {
-            setQuiz([{
-                title: parsed.title,
-                quiz: parsed.quiz
-            }]);
-            setcurrentindex(parsed.currentindex || 0);
-            settime(parsed.timer || 0);
-            setSelectedIndex(parsed.selectedindex || []);
-            setopenquiz(true);
-            settoggle(false);
+    useEffect(() => {
+        const saved = localStorage.getItem("QuizProgress");
+        if (saved) {
+            const parsed = JSON.parse(saved);
+            if (parsed?.quiz?.length > 0) {
+                setQuiz([{
+                    title: parsed.title,
+                    quiz: parsed.quiz
+                }]);
+                setcurrentindex(parsed.currentindex || 0);
+                settime(parsed.timer || null);
+                setSelectedIndex(parsed.selectedindex || []);
+                setopenquiz(true);
+                settoggle(false);
+            }
         }
-    }
-}, []);
-
+    }, []);
 
     {/*Next page toggle */ }
     const nextpage = () => {
@@ -183,72 +177,50 @@ const Quiz = () => {
     }
 
     {/*Store History To Database */ }
-    const newhistory = async (status: string, score: string, data?: Quizset) => {
-        if (!id) return; 
-        if (!data && typeof window !== "undefined") {
-            const stored = localStorage.getItem("QuizData");
-            if (!stored) {
-                console.error("No Quizdata in localStorage");
-                return;
-            }
-            data = JSON.parse(stored);
+    const newhistory = async (status: string, score: string) => {
+        const stored = localStorage.getItem("QuizData");
+        if (!stored) {
+            console.error("No Quizdata in localStorage");
+            return;
         }
+        if (!id) return;
+        const data: Quizset = JSON.parse(stored);
         try {
-            const result = await storehistory(id, data!, status, score);
-            if (result && result.success) console.log("Stored successfully");
-        } catch (err) {
+            const result = await storehistory(id, data, status, score);
+            if (result && result.success) {
+                console.log("Store");
+            }
+        } catch (err: any) {
             console.log(err);
         }
     };
 
-
     {/*Retake the quiz again*/ }
     const requiz = () => {
-        if (Quiz[0]) {
-            newhistory("Completed", total.toString(), Quiz[0]);
-        }
-
-      
         settoggle(true);
         settogglecheck(false);
         setopenquiz(false);
         settoggleresult(false);
+        newhistory("Completed", total.toString())
         setSelectedIndex([]);
         setQuiz([]);
         setcurrentindex(0);
-        settotal(0);
-        settime(0);
-        if (typeof window !== "undefined") {
+        setTimeout(() => {
             localStorage.removeItem("QuizProgress");
-            localStorage.removeItem("QuizData");
-            localStorage.setItem("QuizFinished", "true");
-        }
-    };
+            window.location.reload()
 
+        }, 2000);
+    }
     {/*Terminate the current Quiz */ }
     const Terminate = () => {
-    if (Quiz[0]) {
-        newhistory("Failed", total.toString(), Quiz[0]);
+
+        newhistory("Failed", total.toString());
+        setTimeout(() => {
+            localStorage.removeItem("QuizProgress");
+            window.location.reload()
+
+        }, 2000);
     }
-
-    
-    settoggle(true);
-    settogglecheck(false);
-    setopenquiz(false);
-    settoggleresult(false);
-    setSelectedIndex([]);
-    setQuiz([]);
-    setcurrentindex(0);
-    settotal(0);
-    settime(0);
-
-    if (typeof window !== "undefined") {
-        localStorage.removeItem("QuizProgress");
-        localStorage.removeItem("QuizData");
-         localStorage.setItem("QuizFinished", "true");
-    }
-};
-
     return (
         <> {isfetching &&
             <div className="fixed inset-0 bg-white/10 z-40 pointer-events-auto"></div>
