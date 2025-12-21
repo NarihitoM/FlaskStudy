@@ -57,14 +57,14 @@ const Mainrenderpage = () => {
                     <div className="flex flex-row justify-center items-center">
                         <img className="w-17 h-17" src={Logo} />
                         <div className="flex flex-col ">
-                            <h1 className="text-2xl font-bold text-black">
+                            <h1 className="text-xl font-bold text-black">
                                 <span className="text-yellow-700">F</span>laskS
                             </h1>
                             <p className="text-gray-500 text-[13px] font-medium">Study</p>
                         </div>
                     </div>
                     <div className="flex flex-row gap-3 bg-gray-100 p-2 rounded-lg justify-center items-center">
-                        <div className="flex flex-col">
+                        <div className="flex flex-col w-[150px]">
                             <p className="font-semibold">{username}</p>
                             <p className="font-medium text-[13px]">{useremail}</p>
                         </div>
