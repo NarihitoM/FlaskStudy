@@ -63,10 +63,10 @@ const Mainrenderpage = () => {
                             <p className="text-gray-500 text-[13px] font-medium">Study</p>
                         </div>
                     </div>
-                    <div className="flex flex-row gap-3 bg-gray-100 p-2 rounded-lg justify-center items-center">
-                        <div className="flex flex-col w-[150px]">
+                    <div className="flex flex-row gap-1 bg-gray-100 p-2 rounded-lg justify-center items-center">
+                        <div className="flex flex-col">
                             <p className="font-semibold">{username}</p>
-                            <p className="font-medium text-[13px]">{useremail}</p>
+                            <p className="font-medium text-[13px] text-wrap">{useremail}</p>
                         </div>
                         <button onClick={logout} className="bg-red-600 p-1.5 rounded-lg active:translate-y-1"><LogOut className="w-4 h-4 text-white" /></button>
                     </div>
