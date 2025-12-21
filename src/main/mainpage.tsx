@@ -317,7 +317,6 @@ const Mainpage = () => {
                             Study smarter, learn faster. Flashcards, notes, and memory tools all in one place.
                         </p>
                         <p className="text-sm max-w-xs text-gray-300 font-semibold"> Developed by <a href="https://narihito-portfolio.vercel.app" className="text-blue-600">Narihito</a></p>
-                        
                     </div>
                     <div className="flex flex-col gap-2">
                         <h2 className="font-semibold text-lg">Quick Links</h2>
