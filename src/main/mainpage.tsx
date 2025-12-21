@@ -235,7 +235,7 @@ const Mainpage = () => {
                 {/* Section-4 */}
                 <section ref={faqref} className="h-auto w-full">
                     <div className="flex flex-col justify-center items-center h-screen">
-                        <h1 className="text-4xl font-bold text-black">
+                        <h1 className="text-4xl font-bold text-black text-center">
                             <span className="text-yellow-700">Frequently</span> Ask Questions?
                         </h1>
                         <div className="flex justify-center items-center w-full px-10 flex-wrap gap-5 mt-10">
@@ -317,16 +317,7 @@ const Mainpage = () => {
                             Study smarter, learn faster. Flashcards, notes, and memory tools all in one place.
                         </p>
                         <p className="text-sm max-w-xs text-gray-300 font-semibold"> Developed by <a href="https://narihito-portfolio.vercel.app" className="text-blue-600">Narihito</a></p>
-                        <div className="flex gap-3 mt-2">
-                            <a href="#"
-                                className="hover:bg-black bg-white w-10 h-10 rounded-full flex justify-center items-center transition-colors">
-                                <Facebook className="w-5 h-5 text-blue-600" />
-                            </a>
-                            <a href="#"
-                                className="hover:bg-black bg-white w-10 h-10 rounded-full flex justify-center items-center transition-colors">
-                                <Youtube className="w-5 h-5 text-red-600" />
-                            </a>
-                        </div>
+                        
                     </div>
                     <div className="flex flex-col gap-2">
                         <h2 className="font-semibold text-lg">Quick Links</h2>
