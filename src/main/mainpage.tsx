@@ -201,7 +201,7 @@ const Mainpage = () => {
                                     <span className="font-bold text-yellow-700">Flasks Study</span> helps students master subjects with flashcards, memory techniques, and organized note-taking tools.
                                     Whether you’re preparing for exams or learning new topics, our platform makes studying more effective and enjoyable.
                                 </p>
-                                <button className="bg-yellow-600 p-2 rounded-lg font-medium text-[14px] text-white hover:bg-gray-600 active:translate-y-1">Create an account</button>
+                                <button onClick={() => navigate("/signup")}className="bg-yellow-600 p-2 rounded-lg font-medium text-[14px] text-white hover:bg-gray-600 active:translate-y-1">Create an account</button>
                             </div>
                         </div>
                     </div>
