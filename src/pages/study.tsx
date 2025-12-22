@@ -73,7 +73,6 @@ const Study = () => {
             const result = await aiupload(formdata);
             if (result && result.success) {
                 setbool(false);
-                console.log(result.content);
                 setTimeout(() => {
                     window.location.reload()
                 }, 1000);
