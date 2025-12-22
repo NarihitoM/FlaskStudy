@@ -25,7 +25,7 @@ const Summary = () => {
                 }
             }
             catch (err: any) {
-                console.log(err?.response?.data.message);
+                
                 setisfetching(false);
             }
         }
