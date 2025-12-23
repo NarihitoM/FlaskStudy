@@ -21,7 +21,7 @@ const Summary = () => {
                 if (result && result.success) {
                     setisfetching(false);
                     setfetchsummary(result.data);
-                    console.log(result.data);
+                  
                 }
             }
             catch (err: any) {
