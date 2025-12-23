@@ -66,8 +66,6 @@ const Quiz = () => {
                 setopenquiz(true);
                 setQuiz([result.data]);
                 localStorage.setItem("QuizData", JSON.stringify(result.data));
-                console.log(result.data);
-                console.log(Quiz);
                 setisfetching(false);
             }
         }
